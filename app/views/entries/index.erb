@@ -1,0 +1,15 @@
+<h1> here are all the entries </h1>
+<p><a href="/">home</a></p>
+
+<% @entries.each do |entry| %>
+  <h2> <%=entry.title %></h2>
+
+  <p><%=entry.body %></p>
+
+  <% entry.tags.each do |t| %>
+
+  <h5>tags</h5>
+  <p><%= t.tag_name %>
+    <%end%>
+  <% end %>
+
