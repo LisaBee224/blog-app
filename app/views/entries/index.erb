@@ -1,15 +1,27 @@
 <h1> here are all the entries </h1>
 <p><a href="/">home</a></p>
-
+<h1> recent entries </h1>
 <% @entries.each do |entry| %>
+<% if entry.user_id == current_user.id %>
+  <a href='/entries/<%=entry.id%>/edit'> edit this post </a>
+  <%end%>
   <h2> <%=entry.title %></h2>
 
   <p><%=entry.body %></p>
+  <p>this post was lovingly written by: <%=entry.user.username%></p>
 
   <% entry.tags.each do |t| %>
 
   <h5>tags</h5>
   <p><%= t.tag_name %>
+
+
     <%end%>
   <% end %>
 
+<h1>tags being used</h1>
+<ul>
+<%@tags.each do |tag| %>
+<li><a href="/tags/<%=tag.id %>"><%=tag.tag_name %></a></li>
+<%end%>
+</ul>

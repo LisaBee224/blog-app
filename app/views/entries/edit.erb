@@ -1,0 +1,8 @@
+<h1>edit your post</h1>
+<form method="post" action="/entries">
+  <input type="text" name="entry[title]" value="<%=@entry.title%>">
+  <textarea name="entry[body]" placeholder="<%=@entry.body%>"></textarea>
+  <input type="submit" value="update my post">
+</form>
+
+
