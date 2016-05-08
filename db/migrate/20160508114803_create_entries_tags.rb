@@ -4,7 +4,7 @@ class CreateEntriesTags < ActiveRecord::Migration
       t.references :entry, foreign_key: true
       t.references :tag, foreign_key: true
 
-      t.timestamps(null:false)
+      t.timestamps(null: false)
     end
   end
 end
