@@ -1,0 +1,69 @@
+body{
+
+font-family: 'Quicksand', sans-serif;
+
+}
+a{
+  text-decoration:none;
+  color:#006666;
+}
+
+.container{
+  width:950px;
+  margin:0 auto;
+  padding-top:5%;
+}
+h1{
+  font-family: 'Corben', cursive;
+}
+h3{
+  font-family: 'Corben', cursive;
+}
+nav{
+  float:right;
+  width: 100%;
+  padding: 0 2%;
+  background-color: #e6fef8;
+  text-align:right;
+  margin-top:-10px;
+}
+
+nav ul li{
+    display:inline-block;
+  list-style:none;
+  padding:.2em;
+}
+#tags{
+
+  float:left;
+  margin-left: 30%;
+  border: 1px dashed #057a5d;
+  border-radius:10px;
+  padding:2%;
+
+}
+#tags ul{
+  list-style:none;
+ padding-left:0;
+ text-align:center;
+}
+#entries{
+  float:left;
+
+}
+
+.entry{
+  padding: 5% 0;
+  border-bottom: 1px solid #057a5d;
+}
+
+#auth{
+  color:#00804d;
+  font-size:.8em;
+}
+
+.entry a{
+  text-decoration: none;
+}
+
+

@@ -1,1 +1,30 @@
-<h1>Welcome to your page, <%=current_user.username%></h1>
+<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+
+<link href='https://fonts.googleapis.com/css?family=Corben' rel='stylesheet' type='text/css'>
+<div class="container">
+<h3>hey, this is your profile <%=current_user.username%>-- glad you're here! </h3>
+
+
+<h1> your recent entries </h1>
+<% @entries.each do |entry| %>
+<div class="entry">
+<% if entry.user_id == current_user.id %>
+
+
+  <h2> <%=entry.title %></h2>
+
+  <p><%=entry.body %></p>
+
+
+  <% entry.tags.each do |t| %>
+
+  <p>tags:
+<%= t.tag_name %></p>
+
+</div>
+<%end%>
+    <%end%>
+  <% end %>
+
+
+</div>

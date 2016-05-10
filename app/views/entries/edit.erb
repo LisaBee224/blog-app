@@ -1,7 +1,9 @@
 <h1>edit your post</h1>
-<form method="post" action="/entries">
+<form method="post" action="/entries/<%= @entry.id %>">
+  <input type="hidden" name="_method" value="PUT">
+
   <input type="text" name="entry[title]" value="<%=@entry.title%>">
-  <textarea name="entry[body]" placeholder="<%=@entry.body%>"></textarea>
+  <textarea name="entry[body]" ><%=@entry.body%></textarea>
   <input type="submit" value="update my post">
 </form>
 
