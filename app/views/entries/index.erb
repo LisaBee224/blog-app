@@ -1,27 +1,38 @@
-<h1> here are all the entries </h1>
-<p><a href="/">home</a></p>
+  <link rel="stylesheet" href="/css/application.css">
+
+<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+
+<link href='https://fonts.googleapis.com/css?family=Corben' rel='stylesheet' type='text/css'>
+
+<div class="container">
+<div id="entries">
 <h1> recent entries </h1>
 <% @entries.each do |entry| %>
+<div class="entry">
 <% if entry.user_id == current_user.id %>
-  <a href='/entries/<%=entry.id%>/edit'> edit this post </a>
+  <a href='/entries/<%=entry.id%>/edit'> edit your post </a>
   <%end%>
   <h2> <%=entry.title %></h2>
 
   <p><%=entry.body %></p>
-  <p>this post was lovingly written by: <%=entry.user.username%></p>
+  <p id="auth">this post was written with &#x02665; by: <%=entry.user.username%></p>
 
   <% entry.tags.each do |t| %>
 
-  <h5>tags</h5>
-  <p><%= t.tag_name %>
+  <p>tags:
+<%= t.tag_name %></p>
 
-
+</div>
     <%end%>
   <% end %>
 
-<h1>tags being used</h1>
+</div>
+<div id="tags">
+<h3>tags currently being used</h3>
 <ul>
 <%@tags.each do |tag| %>
 <li><a href="/tags/<%=tag.id %>"><%=tag.tag_name %></a></li>
 <%end%>
 </ul>
+</div>
+</div>

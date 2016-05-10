@@ -20,9 +20,10 @@ get '/entries/:id/edit' do
 
 end
 
-post '/entries' do
-  entry = Entry.find_by(id: params[:entry_id])
-  entry.update_attributes(title: params[:entry][:title], body: params[:entry][:body])
+put '/entries/:id' do
+  @entry = Entry.find_by(id: params[:id])
+
+  @entry.update_attributes(params[:entry])
   redirect '/entries/index'
 end
 
