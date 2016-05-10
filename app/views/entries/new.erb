@@ -1,12 +1,17 @@
+<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Corben' rel='stylesheet' type='text/css'>
+<div class="container">
 <h1>write a post</h1>
 
-<form id="entry" action="/entries/new" method="post">
-  <label>title:</label>
-  <input type="text" name="entry[title]">
-  <label>post:</label>
-  <textarea name="entry[body]"></textarea>
-  <label>tag</label>
-  <input type="text" name="tag[tag_name]">
+<form class="entry" id="entry" action="/entries/new" method="post">
+
+  <input type="text" name="entry[title]" placeholder="title">
+
+  <textarea name="entry[body]" placeholder="write your post..."></textarea>
+
+  <input type="text" name="tag[tag_name]" placeholder="tag">
   <input type="submit" value="post this">
 
 </form>
+
+</div>

@@ -7,6 +7,10 @@ a{
   text-decoration:none;
   color:#006666;
 }
+a:hover{
+  color: #ff6b51;
+  transition: 0.5s ease;
+}
 
 .container{
   width:950px;
@@ -65,5 +69,47 @@ nav ul li{
 .entry a{
   text-decoration: none;
 }
+.user{
+  width:600px;
+  margin: 0 auto;
+  text-align:center;
+}
+.user input{
+  padding: 1em;
+  border:1px solid #333;
+  border-radius: 8px;
+  font-size:1em;
+width:100%;
+margin:2%;
+text-align:center;
+}
+.user #button{
+  background-color: #ff6b51;
+  width:640px;
 
+}
 
+.entry{
+  width:600px;
+  margin: 0 auto;
+
+}
+.entry input{
+  padding: 1em;
+  border:1px solid #333;
+  border-radius: 8px;
+  font-size:1em;
+width:45%;
+margin:2%;
+
+}
+.entry #button{
+  background-color: #ff6b51;
+  width:25%;
+  float:right;
+
+}
+.entry textarea{
+  width:600px;
+  height:350px;
+}
